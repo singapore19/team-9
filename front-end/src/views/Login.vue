@@ -58,7 +58,7 @@
         });
         // eslint-disable-next-line no-console
         if (this.role == 'Staff'){
-          this.$router.push('/userform');
+          this.$router.push('/userhome');
         } else if(this.role == 'Driver'){
           this.$router.push('/driver');
         } else{

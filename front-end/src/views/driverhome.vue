@@ -20,13 +20,10 @@
                                         tile
                                         size="80"
                                         color="grey"
-                                ></v-list-item-avatar>
+                                ><v-icon dark>person</v-icon></v-list-item-avatar>
                             </v-list-item>
 
-                            <v-card-actions>
-                                <v-btn text>Accept</v-btn>
-                                <v-btn text>Reject</v-btn>
-                            </v-card-actions>
+
                         </v-card>
                         <v-spacer></v-spacer>
                         <v-card  class="mx-auto"
@@ -42,13 +39,41 @@
                                         tile
                                         size="80"
                                         color="grey"
-                                ></v-list-item-avatar>
+                                ><v-icon dark>delivery</v-icon></v-list-item-avatar>
                             </v-list-item>
 
-                            <v-card-actions>
-                                <v-btn text>Accept</v-btn>
-                                <v-btn text>Reject</v-btn>
-                            </v-card-actions>
+                        </v-card>
+                        <v-card  class="mx-auto"
+                                 outlined>
+                            <v-list-item three-line>
+                                <v-list-item-content>
+                                    <div class="overline mb-4">JOB</div>
+                                    <v-list-item-title class="headline mb-1">Job#14</v-list-item-title>
+                                    <v-list-item-subtitle>Deliver cartons of noodles from Bishan to HQ</v-list-item-subtitle>
+                                </v-list-item-content>
+                                <v-list-item-avatar
+                                        tile
+                                        size="80"
+                                        color="grey"
+                                ><v-icon dark>delivery</v-icon></v-list-item-avatar>
+                            </v-list-item>
+                        </v-card>
+                        <v-card  class="mx-auto"
+                                 outlined>
+                            <v-list-item three-line>
+                                <v-list-item-content>
+                                    <div class="overline mb-4">JOB</div>
+                                    <v-list-item-title class="headline mb-1">Job#15</v-list-item-title>
+                                    <v-list-item-subtitle>Deliver food supplies from Toa Payoh to HQ</v-list-item-subtitle>
+                                </v-list-item-content>
+
+                                <v-list-item-avatar
+                                        tile
+                                        size="80"
+                                        color="grey"
+                                ><v-icon dark>delivery</v-icon></v-list-item-avatar>
+                            </v-list-item>
+
                         </v-card>
                     </v-layout>
                 </v-container>

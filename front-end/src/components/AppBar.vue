@@ -6,7 +6,7 @@
             <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
             <div class="flex-grow-1"></div>
-            
+
             <v-btn icon>
                 <v-icon>mdi-magnify</v-icon>
             </v-btn>

@@ -62,7 +62,7 @@
         } else if(this.role == 'Driver'){
           this.$router.push('/driver');
         } else{
-          this.$router.push('/admin');
+          this.$router.push('/adminhome');
         }
       }
     }

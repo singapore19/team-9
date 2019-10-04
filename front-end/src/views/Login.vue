@@ -58,11 +58,11 @@
         });
         // eslint-disable-next-line no-console
         if (this.role == 'Staff'){
-          window.location.href = '/userform'
+          this.$router.push('/userform');
         } else if(this.role == 'Driver'){
-          window.location.href = '/driver'
+          this.$router.push('/driver');
         } else{
-          window.location.href = '/admin'
+          this.$router.push('/admin');
         }
       }
     }

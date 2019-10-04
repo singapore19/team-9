@@ -8,13 +8,14 @@
             <v-card-title primary-title>
               <h4>Login</h4>
             </v-card-title>
-              <v-form @submit.prevent="formSubmit" id="user-form">
-              <v-text-field  name="Pickup" label="Pickup" v-model="pickup-point"></v-text-field>
-              <v-text-field  name="Dropoff" label="Dropoff" v-model="dropoff-point"></v-text-field>
+              <v-form @submit.prevent="userform" id="user-form">
+              <v-text-field  name="Pickup" label="Pickup" v-model="pickuppoint"></v-text-field>
+              <v-text-field  name="Dropoff" label="Dropoff" v-model="dropoffpoint"></v-text-field>
               <v-select
                       :items="items"
                       label="Role"
                       dense
+                      v-model = 'type'
               ></v-select>
               <v-text-field  name="Time" label="Time" v-model="time"></v-text-field>
               <v-checkbox v-model="priority" label="Priority" value="Priority"></v-checkbox>
@@ -39,30 +40,32 @@
     data() {
       return {
         items:['Document', 'Cargo', 'Pick-up'],
-        pickup-point: '',
-        dropoff-point: '',
+        pickuppoint: '',
+        dropoffpoint: '',
         time: '',
+        type: '',
         priority: '',
 
         
       };
     },
     methods: {
-      formSubmit(e) {
+      userform(e) {
         e.preventDefault();
         let currentObj = this;
-        this.axios.post('https://code-4-good.herokuapp.com/login', {
-          pickup: this.pickup-point,
-          dropoff: this.dropoff-point,
+        this.axios.post('https://code-4-good.herokuapp.com/userform', {
+          pickup: this.pickuppoint,
+          dropoff: this.dropoffpoint,
           time: this.time,
+          type: this.type,
           priority: this.priority,
 
         }).then(function (response) {
           currentObj.output = response.data;
-          window.location.href = '/driverview'
+          this.$router.push('/userHome');
         }).catch(function (error) {
                   currentObj.output = error;
-          window.location.href = '/driverview'
+          this.$router.push('/userHome');
         });
       }
     }

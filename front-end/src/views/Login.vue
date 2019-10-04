@@ -12,6 +12,7 @@
               <v-text-field  name="Username" label="Username" v-model="username"></v-text-field>
               <v-text-field  name="Password" label="Password" type="password" v-model="password"></v-text-field>
               <v-select
+                      v-model="role"
                       :items="items"
                       label="Role"
                       dense
@@ -37,6 +38,7 @@
         items:['Staff', 'Driver', 'Admin'],
         username: '',
         password: '',
+        role: '' ,
         output: ''
       };
     },
@@ -48,12 +50,20 @@
           password: this.password,
           username: this.username
         }).then(function (response) {
+          // eslint-disable-next-line no-console
+          console.log(this.role);
           currentObj.output = response.data;
-          window.location.href = '/userform'
         }).catch(function (error) {
-                  currentObj.output = error;
-          window.location.href = '/userform'
+          currentObj.output = error;
         });
+        // eslint-disable-next-line no-console
+        if (this.role == 'Staff'){
+          this.$router.push('/userform');
+        } else if(this.role == 'Driver'){
+          this.$router.push('/driver');
+        } else{
+          this.$router.push('/admin');
+        }
       }
     }
   }

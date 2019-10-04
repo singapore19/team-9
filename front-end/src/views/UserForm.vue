@@ -22,7 +22,7 @@
 
 
               <v-card-actions>
-                <v-btn primary large block type="submit" color="success" form="user-form">Login</v-btn>
+                <v-btn primary large block type="submit" color="success" form="user-form">Create Schedule</v-btn>
               </v-card-actions>
             </v-form>
           </v-card>

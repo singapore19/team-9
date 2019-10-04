@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Login from "./views/Login.vue"
 import AdminHome from './views/AdminHome'
 import UserForm from './views/UserForm'
 
@@ -9,12 +10,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'admin-home',
-        component: AdminHome
+      name: 'login',
+        component: Login
     },
     {
-        path: 'admin-home',
-        name: 'admin-home',
+        path: '/adminhome',
+        name: 'adminhome',
         component: AdminHome
       },
     {

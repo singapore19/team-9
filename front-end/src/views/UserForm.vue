@@ -6,7 +6,7 @@
           <v-img src="../assets/main-logo.png"></v-img>
           <v-card flat>
             <v-card-title primary-title>
-              <h4>Login</h4>
+              <h4>Create Schedule</h4>
             </v-card-title>
               <v-form @submit.prevent="userform" id="user-form">
               <v-text-field  name="Pickup" label="Pickup" v-model="pickuppoint"></v-text-field>

@@ -1,36 +1,31 @@
 <template>
-    <div>
-        <v-app-bar
-                color="primary"
-        >
-            <v-app-bar-nav-icon></v-app-bar-nav-icon>
+  <div>
+    <v-app-bar color="primary">
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-            <div class="flex-grow-1"></div>
-            
-            <v-btn icon>
-                <v-icon>mdi-magnify</v-icon>
-            </v-btn>
+      <div class="flex-grow-1"></div>
 
-            <v-menu
-                    left
-                    bottom
-            >
-                <template v-slot:activator="{ on }">
-                    <v-btn icon v-on="on">
-                        <v-icon>mdi-dots-vertical</v-icon>
-                    </v-btn>
-                </template>
-
-                <v-list>
-                    <v-list-item
-                            v-for="n in 5"
-                            :key="n"
-                            @click="() => {}"
-                    >
-                        <v-list-item-title>Option {{ n }}</v-list-item-title>
-                    </v-list-item>
-                </v-list>
-            </v-menu>
-        </v-app-bar>
-    </div>
+      <v-navigation-drawer v-model="drawer" absolute bottom temporary>
+        <v-list nav dense>
+          <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
+            <div :v-for="item in admin">
+            <v-list-item>
+              <v-list-item-title>{{item}}</v-list-item-title>
+            </v-list-item>
+            </div>
+          </v-list-item-group>
+        </v-list>
+      </v-navigation-drawer>
+    </v-app-bar>
+  </div>
 </template>
+
+<script>
+export default {
+  data: function() {
+    return {
+      admin:['home', 'scheduler'],
+    };
+  }
+};
+</script>

@@ -22,6 +22,8 @@
                                         color="grey"
                                 ><v-icon dark>person</v-icon></v-list-item-avatar>
                             </v-list-item>
+
+
                         </v-card>
                         <v-spacer></v-spacer>
                         <v-card  class="mx-auto"
@@ -71,6 +73,7 @@
                                         color="grey"
                                 ><v-icon dark>delivery</v-icon></v-list-item-avatar>
                             </v-list-item>
+
                         </v-card>
                     </v-layout>
                 </v-container>

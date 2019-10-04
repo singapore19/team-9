@@ -49,10 +49,10 @@
           username: this.username
         }).then(function (response) {
           currentObj.output = response.data;
-          window.location.href = '/admin-home'
+          window.location.href = '/userform'
         }).catch(function (error) {
                   currentObj.output = error;
-          window.location.href = '/admin-home'
+          window.location.href = '/userform'
         });
       }
     }

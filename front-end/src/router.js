@@ -3,8 +3,9 @@ import Router from 'vue-router'
 import Login from './views/Login.vue'
 import AdminHome from './views/AdminHome'
 import UserForm from './views/UserForm'
+import DriverHome from './views/driverhome'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -22,6 +23,11 @@ export default new Router({
       path: '/userform',
       name: 'userform',
       component: UserForm
-    }
+    },
+      {
+          path: '/driver',
+          name: 'driver',
+          component: DriverHome
+      }
   ]
 })

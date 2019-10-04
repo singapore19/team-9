@@ -1,8 +1,8 @@
 <template>
     <v-container>
-        <v-layout row class="text-xs-center" >
+        <v-layout row class="justify-center" >
             <v-flex xs4 class="grey lighten-4" >
-                <v-container style="position: relative;top: 13%;" class="text-xs-center" >
+                <v-container style="position: relative;top: 13%; display: inline-block" class="text-xs-center" >
                     <v-layout column justify-space-between fill-height wrap>
                         <v-card
                                 class="mx-auto"

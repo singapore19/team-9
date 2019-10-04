@@ -1,8 +1,8 @@
 <template>
   <v-container>
-    <v-layout row class="text-xs-center">
+    <v-layout row class="justify-center">
       <v-flex xs4 class="grey lighten-4">
-        <v-container style="position: relative;top: 13%;" class="text-xs-center">
+        <v-container style="position: relative;display: inline-block" class="text-xs-center">
           <v-img src="../assets/main-logo.png"></v-img>
           <v-card flat>
             <v-card-title primary-title>

@@ -1,8 +1,8 @@
 <template>
   <v-container>
-    <v-layout row class="text-xs-center">
+    <v-layout row class="justify-center">
       <v-flex xs4 class="grey lighten-4">
-        <v-container style="position: relative" class="text-xs-center">
+        <v-container style="position: relative; display:inline-block" class="text-xs-center">
           <v-dialog v-model="dialog" scrollable max-width="300px">
             <v-card>
               <v-card-title>Reschedule Time</v-card-title>
@@ -39,7 +39,7 @@
                 </v-card-actions>
               </v-card>
 
-              <v-card max-width="344" class="mx-auto" style="padding-top:5px">
+              <v-card max-width="344" class="mx-auto" style="margin-top:10px">
                 <v-card-title>Address: Pioneer</v-card-title>
                 <v-card-text>Type: People</v-card-text>
                 <v-card-text>Time: 9:00</v-card-text>
@@ -48,7 +48,7 @@
                 </v-card-actions>
               </v-card>
 
-              <v-card max-width="344" class="mx-auto">
+              <v-card max-width="344" class="mx-auto" style="margin-top:10px">
                 <v-card-title>Address: Laboardo Park</v-card-title>
                 <v-card-text>Type: Donation</v-card-text>
                 <v-card-text>Time: 9:00</v-card-text>
@@ -73,7 +73,7 @@
                 </v-card-actions>
               </v-card>
 
-              <v-card max-width="344" class="mx-auto">
+              <v-card max-width="344" class="mx-auto" style="margin-top:10px">
                 <v-card-title>Address: Pioneer</v-card-title>
                 <v-card-text>Type: People</v-card-text>
                 <v-card-text>Time: 9:00</v-card-text>
@@ -82,7 +82,7 @@
                 </v-card-actions>
               </v-card>
 
-              <v-card max-width="344" class="mx-auto">
+              <v-card max-width="344" class="mx-auto" style="margin-top:10px">
                 <v-card-title>Address: Laboardo Park</v-card-title>
                 <v-card-text>Type: Donation</v-card-text>
                 <v-card-text>Time: 9:00</v-card-text>
@@ -107,7 +107,7 @@
                 </v-card-actions>
               </v-card>
 
-              <v-card max-width="344" class="mx-auto">
+              <v-card max-width="344" class="mx-auto" style="margin-top:10px">
                 <v-card-title>Address: Pioneer</v-card-title>
                 <v-card-text>Type: People</v-card-text>
                 <v-card-text>Time: 9:00</v-card-text>
@@ -116,7 +116,7 @@
                 </v-card-actions>
               </v-card>
 
-              <v-card max-width="344" class="mx-auto">
+              <v-card max-width="344" class="mx-auto" style="margin-top:10px">
                 <v-card-title>Address: Laboardo Park</v-card-title>
                 <v-card-text>Type: Donation</v-card-text>
                 <v-card-text>Time: 9:00</v-card-text>
@@ -141,7 +141,7 @@
                 </v-card-actions>
               </v-card>
 
-              <v-card max-width="344" class="mx-auto">
+              <v-card max-width="344" class="mx-auto" style="margin-top:10px">
                 <v-card-title>Address: Pioneer</v-card-title>
                 <v-card-text>Type: People</v-card-text>
                 <v-card-text>Time: 9:00</v-card-text>
@@ -150,7 +150,7 @@
                 </v-card-actions>
               </v-card>
 
-              <v-card max-width="344" class="mx-auto">
+              <v-card max-width="344" class="mx-auto" style="margin-top:10px">
                 <v-card-title>Address: Laboardo Park</v-card-title>
                 <v-card-text>Type: Donation</v-card-text>
                 <v-card-text>Time: 9:00</v-card-text>

@@ -1,75 +1,170 @@
 <template>
   <v-container>
-    <li v-for="item in items" :key="item.date" style="list-style: none;">
-        <h1>{{item}}</h1>
-      <v-row class="mb-6" no-gutters>
-        <v-col :md="3" justify="top">{{item.date}}</v-col>
-        <h1>{{item.date}}</h1>
-        <v-col :md="9">
-          <li :v-for="task in item.tasks" :key="task.destination" style="list-style: none;">
-            <v-card max-width="344" class="mx-auto">
-              <v-card-title>Address: {{ task.destination}}</v-card-title>
-              <v-card-text>Type: {{ task.type }}</v-card-text>
-              <v-card-actions>
-                <v-btn text>Click</v-btn>
-              </v-card-actions>
-            </v-card>
-          </li>
-        </v-col>
-      </v-row>
-    </li>
+    <v-dialog v-model="dialog" scrollable max-width="300px">
+      <v-card>
+        <v-card-title>Reschedule Time</v-card-title>
+        <v-divider></v-divider>
+        <v-card-text style="height: 300px;">
+          <v-form ref="form" v-model="valid" :lazy-validation="lazy">
+            <typography class="display-5">Select Date</typography>
+            <v-date-picker v-model="picker" width="200px"></v-date-picker>
+            <br/>
+            <typography class="display-5">Select Time</typography>
+            <v-time-picker v-model="picker" width="200px"></v-time-picker>
+          </v-form>
+        </v-card-text>
+        <v-divider></v-divider>
+        <v-card-actions>
+          <v-btn color="blue darken-1" text @click="dialog = false">Close</v-btn>
+          <v-btn color="blue darken-1" text @click="dialog = false">Save</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
+    <v-row class="mb-6" gutters="20">
+      <v-col cols="3" justify="top">
+        <typography>10.5</typography>
+      </v-col>
+      <v-col cols="17">
+        <v-card max-width="344" class="mx-auto">
+          <v-card-title>Address: Buona Vista</v-card-title>
+          <v-card-text>Type: People</v-card-text>
+          <v-card-text>Time: 9:00</v-card-text>
+          <v-card-actions>
+            <v-btn text @click="dialog = true">Reschedule</v-btn>
+          </v-card-actions>
+        </v-card>
+
+        <v-card max-width="344" class="mx-auto">
+          <v-card-title>Address: Pioneer</v-card-title>
+          <v-card-text>Type: People</v-card-text>
+          <v-card-text>Time: 9:00</v-card-text>
+          <v-card-actions>
+            <v-btn text>Reschedule</v-btn>
+          </v-card-actions>
+        </v-card>
+
+        <v-card max-width="344" class="mx-auto">
+          <v-card-title>Address: Laboardo Park</v-card-title>
+          <v-card-text>Type: Donation</v-card-text>
+          <v-card-text>Time: 9:00</v-card-text>
+          <v-card-actions>
+            <v-btn text>Reschedule</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <v-row class="mb-6" gutters="20">
+      <v-col cols="3" justify="top">
+        <typography>10.6</typography>
+      </v-col>
+      <v-col cols="17">
+        <v-card max-width="344" class="mx-auto">
+          <v-card-title>Address: Buona Vista</v-card-title>
+          <v-card-text>Type: People</v-card-text>
+          <v-card-text>Time: 9:00</v-card-text>
+          <v-card-actions>
+            <v-btn text>Reschedule</v-btn>
+          </v-card-actions>
+        </v-card>
+
+        <v-card max-width="344" class="mx-auto">
+          <v-card-title>Address: Pioneer</v-card-title>
+          <v-card-text>Type: People</v-card-text>
+          <v-card-text>Time: 9:00</v-card-text>
+          <v-card-actions>
+            <v-btn text>Reschedule</v-btn>
+          </v-card-actions>
+        </v-card>
+
+        <v-card max-width="344" class="mx-auto">
+          <v-card-title>Address: Laboardo Park</v-card-title>
+          <v-card-text>Type: Donation</v-card-text>
+          <v-card-text>Time: 9:00</v-card-text>
+          <v-card-actions>
+            <v-btn text>Reschedule</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <v-row class="mb-6" gutters="20">
+      <v-col cols="3" justify="top">
+        <typography>10.7</typography>
+      </v-col>
+      <v-col cols="17">
+        <v-card max-width="344" class="mx-auto">
+          <v-card-title>Address: Buona Vista</v-card-title>
+          <v-card-text>Type: People</v-card-text>
+          <v-card-text>Time: 9:00</v-card-text>
+          <v-card-actions>
+            <v-btn text>Reschedule</v-btn>
+          </v-card-actions>
+        </v-card>
+
+        <v-card max-width="344" class="mx-auto">
+          <v-card-title>Address: Pioneer</v-card-title>
+          <v-card-text>Type: People</v-card-text>
+          <v-card-text>Time: 9:00</v-card-text>
+          <v-card-actions>
+            <v-btn text>Reschedule</v-btn>
+          </v-card-actions>
+        </v-card>
+
+        <v-card max-width="344" class="mx-auto">
+          <v-card-title>Address: Laboardo Park</v-card-title>
+          <v-card-text>Type: Donation</v-card-text>
+          <v-card-text>Time: 9:00</v-card-text>
+          <v-card-actions>
+            <v-btn text>Reschedule</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <v-row class="mb-6" gutters="20">
+      <v-col cols="3" justify="top">
+        <typography>10.8</typography>
+      </v-col>
+      <v-col cols="17">
+        <v-card max-width="344" class="mx-auto">
+          <v-card-title>Address: Buona Vista</v-card-title>
+          <v-card-text>Type: People</v-card-text>
+          <v-card-text>Time: 9:00</v-card-text>
+          <v-card-actions>
+            <v-btn text>Reschedule</v-btn>
+          </v-card-actions>
+        </v-card>
+
+        <v-card max-width="344" class="mx-auto">
+          <v-card-title>Address: Pioneer</v-card-title>
+          <v-card-text>Type: People</v-card-text>
+          <v-card-text>Time: 9:00</v-card-text>
+          <v-card-actions>
+            <v-btn text>Edit</v-btn>
+          </v-card-actions>
+        </v-card>
+
+        <v-card max-width="344" class="mx-auto">
+          <v-card-title>Address: Laboardo Park</v-card-title>
+          <v-card-text>Type: Donation</v-card-text>
+          <v-card-text>Time: 9:00</v-card-text>
+          <v-card-actions>
+            <v-btn text>Edit</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
 <script>
-
 export default {
-  name: "AdminHome",
   data() {
     return {
-      items: [
-        {
-          date: "10.4",
-          tasks: [
-            { destination: "dummy1", type: "dummy2" },
-            { destination: "dummy3", type: "dummy4" },
-            { destination: "dummy5", type: "dummy6" }
-          ]
-        },
-        {
-          date: "10.5",
-          tasks: [
-            { destination: "", type: "" },
-            { destination: "", type: "" },
-            { destination: "", type: "" }
-          ]
-        },
-        {
-          date: "10.6",
-          tasks: [
-            { destination: "", type: "" },
-            { destination: "", type: "" },
-            { destination: "", type: "" }
-          ]
-        },
-        {
-          date: "10.7",
-          tasks: [
-            { destination: "", type: "" },
-            { destination: "", type: "" },
-            { destination: "", type: "" }
-          ]
-        },
-        {
-          date: "10.8",
-          tasks: [
-            { destination: "", type: "" },
-            { destination: "", type: "" },
-            { destination: "", type: "" }
-          ]
-        }
-      ]
-    }
-  },
+      dialog: false
+    };
+  }
 };
 </script>
